@@ -1,0 +1,17 @@
+<!-- <app-nav-bar *ngIf="commonService.loginStatus"></app-nav-bar>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="page-wrapper">
+    <app-nav-bar *ngIf="commonService.loginStatus"></app-nav-bar>
+    <router-outlet></router-outlet> 
+  </div>
+  

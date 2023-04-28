@@ -1,0 +1,43 @@
+<!-- <h2>Cosma</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Login</button>
+    </div>
+</form> -->
+
+    <div id="card">
+      <div id="card-content">
+        <div id="card-title">
+          <h2>COSMA</h2>
+          <!-- <div class="underline-title"></div> -->
+        </div>
+        <form class="form" >
+          <label for="user-email" style="padding-top:13px">
+              &nbsp;Username
+            </label>
+          <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+          <div class="form-border"></div>
+          <label for="user-password" style="padding-top:22px">&nbsp;Password
+            </label>
+          <input id="user-password" class="form-content" type="password" name="password" required />
+          <div class="form-border"></div>
+        
+          <input id="submit-btn" type="submit" name="submit" value="LOGIN" (click)="onSubmit()"/>
+          
+        </form>
+      </div>
+    </div>

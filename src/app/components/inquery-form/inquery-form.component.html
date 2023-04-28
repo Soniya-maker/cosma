@@ -1,0 +1,96 @@
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>New Inquiry</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Client Name</label>
+                            <input type="text" class="form-control" formControlName="client_name">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.client_name.touched || submitted) && registerFormControl.client_name.errors?.required">
+                                Name is required
+                            </span>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Project Name</label>
+                            <input type="text" class="form-control" formControlName="proj_name">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.proj_name.touched || submitted) && registerFormControl.proj_name.errors?.required">
+                                Project Name is required
+                            </span>
+                            <!-- <span class="text-danger"
+                                *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+                                Enter a valid email address
+                            </span> -->
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Job Description</label>
+                            <!-- <textarea rows="4" cols="39">
+                            </textarea> -->
+                            <input type="text" class="form-control" formControlName="job_desc">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.job_desc.touched || submitted) && registerFormControl.job_desc.errors?.required">
+                                Job Description is required
+                            </span>
+                            <!-- <span class="text-danger"
+                                *ngIf="registerFormControl.username.touched && registerFormControl.username.errors?.userNameNotAvailable">
+                                User Name is not available
+                            </span> -->
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <input type="text" class="form-control" formControlName="category">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.category.touched || submitted) && registerFormControl.category.errors?.required">
+                                Category is required
+                            </span>
+                            <!-- <span class="text-danger"
+                                *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+                                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                letter and 1 number
+                            </span> -->
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Due Date</label>
+                            <input type="date" class="form-control" formControlName="due_date">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.due_date.touched || submitted)&& registerFormControl.due_date.errors?.required">
+                                Due Date is required
+                            </span>
+                            <!-- <span class="text-danger"
+                                *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+                                Passwords doesnot match
+                            </span> -->
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Attachments</label>
+                            <input type="file" class="form-control" formControlName="file">
+                            <!-- <span class="text-danger"
+                                *ngIf="(registerFormControl.due_date.touched || submitted)&& registerFormControl.due_date.errors?.required">
+                                Due Date is required
+                            </span> -->
+                            <!-- <span class="text-danger"
+                                *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+                                Passwords doesnot match
+                            </span> -->
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button style="width: 100%;" type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
